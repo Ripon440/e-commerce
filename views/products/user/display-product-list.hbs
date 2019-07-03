@@ -1,0 +1,20 @@
+<div>
+    <div>
+        
+        <div class="row m-0">
+            {{# each productList}}
+            <div class="mt-2 pl-0 pr-1 col-6 col-xs-6 col-sm-4 col-md-4 col-lg-2">
+                <div class="product">
+                    <div>
+                        <a href="/products/display-by-category/{{ this.category }}"><img class="img-h200" src="{{ this.img_path }}" alt="product image"></a>
+                    </div>
+                    <div class="product-bottom text-center">
+                        <p class="mb-0 text-capitalize">{{ this.category }}</p>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        
+    </div>
+</div>

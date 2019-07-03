@@ -1,0 +1,170 @@
+<div class="single-product" style="margin:20px 0;"><!-- Left Start -->
+    <div class="row m-0">
+        {{!-- <div class="col-md-2 col-lg-2">
+            left text area
+        </div> --}}
+        <div class="col-sm-12 col-md-12 col-lg-12 p-0" style="margin:15px 0 0 0;">
+            <div class="red-candy">
+                <h5 class="mb-0 p-3">Other's colors of this product</h5>
+            </div>
+            <div class="row m-0 ">
+                {{# each product.images }}
+                <div class="col-sm-12 col-md-6 col-lg-6 pl-0 last-child" style="margin-top:10px;">
+                    <div class="row m-lr-0">
+                        <div class="col-sm-4 col-md-4 col-lg-4 p-lr-0">
+                            <a href="/orders/add-to-cart-or-order/{{ this._id }}"><img src="{{ this.img_path }}" alt="image" style="width:100%;height:100%;"></a>
+                        </div>
+                        <div class="col-sm-8 col-md-8 col-lg-8" style="background-color:#fff">
+                            <div  style="padding:10px 0;">
+                                <div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item p-0 text-uppercase" style="font-weight:bold;">Code : {{ this.color_code }}</li>
+                                    </ul>
+                                </div>
+
+                                {{#if this.sizes}}
+                                <div class="m-0">
+                                    <label for="sizes" class="col-form-label p-0">Sizes:</label>
+                                    <div class="">
+                                        <table class="table table-bordered table-sm text-center m-0 p-0">
+                                            <tbody>
+                                                <tr>
+                                                    <td>Size:</td>
+                                                    {{# each this.sizes}}
+                                                    <td>{{ this.size }}</td>
+                                                    {{/each}}
+                                                </tr>
+                                                <tr>
+                                                    <td>Quantity:</td>
+                                                    {{# each this.sizes}}
+                                                    <td>{{ this.size_qty }}</td>
+                                                    {{/each}}
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                {{/if}}
+
+                                <div class="row m-0" >
+                                    <div class="col p-0">
+                                        <a href="/orders/add-to-cart-or-order/{{ this._id }}" class="btn  btn-red-candy form-control mt-2">Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+            <div class="row" style="margin: 20px 0 0 0;">
+                <div class="col-sm-12 col-md-8 col-lg-8 offset-md-2 offset-lg-2">
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <a class="nav-item nav-link active" id="nav-product-details-tab" data-toggle="tab" href="#nav-product-details" role="tab" aria-controls="nav-product-details" aria-selected="true">Product details</a>
+                            <a class="nav-item nav-link" id="nav-shipping-tab" data-toggle="tab" href="#nav-shipping" role="tab" aria-controls="nav-shipping" aria-selected="false">Shipping</a>
+                            <a class="nav-item nav-link" id="nav-garenty-tab" data-toggle="tab" href="#nav-garenty" role="tab" aria-controls="nav-garenty" aria-selected="false">Seller Garenty</a>
+                        </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active white" id="nav-product-details" role="tabpanel" aria-labelledby="nav-product-details-tab">
+                            <div class="" style="padding: 6px 20px">
+                                <h3>Items specifications</h3>
+                            </div>
+                            <div class="row p-3">
+                                <div class="col-sm-12 col-md-12 col-md-12">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">Product code:{{ product.code }}</li>
+                                        <li class="list-group-item">Brand name: {{ product.title }}</li>
+                                        <li class="list-group-item">Price: {{ product.price }}</li>
+                                        {{!-- <li class="list-group-item">Model number:</li>
+                                        <li class="list-group-item">Season:</li> --}}
+                                    </ul>
+                                </div>
+<!--
+                                <div class="col-sm-12 col-md-6 col-md-6">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">Gender:</li>
+                                        <li class="list-group-item">Colors available:</li>
+                                        <li class="list-group-item">Size available:</li>
+                                        <li class="list-group-item">Insole Material</li>
+                                        <li class="list-group-item">New arrival:</li>
+                                    </ul>
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="tab-pane fade white" id="nav-shipping" role="tabpanel" aria-labelledby="nav-shipping-tab">
+                            <div class="" style="padding: 6px 20px">
+                                <h3>Shipping Details:</h3>
+                            </div>
+                            <div class="p-3">
+                                <table class="table table-bordered">
+                                    <caption>Details about shipping system.</caption>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Shipping Company</th>
+                                            <th scope="col">Shipping Cost</th>
+                                            <th scope="col">Estimated Delivery Time</th>
+                                            <th scope="col">Tracking information</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td scope="row">1</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">2</td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">3</td>
+                                            <td>Larry the Bird</td>
+                                            <td>Larry the Bird</td>
+                                            <td>@twitter</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade white" id="nav-garenty" role="tabpanel" aria-labelledby="nav-garenty-tab">
+                            <div class="" style="padding: 6px 20px">
+                                <h3>Seller Guarenty:</h3>
+                            </div>
+                            <div class="p-3">
+                                <table class="table table-bordered">
+                                    <caption>Details about seller guarenty.</caption>
+                                    <tbody>
+                                        <tr class="row" style="margin-left:0;margin-right:0;">
+                                            <th class="col-md-4">Return Policy</th>
+                                            <td class="col-md-8">
+                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio blanditiis omnis,
+                                                non doloribus asperiores quam consequuntur dolore eos, necessitatibus accusamus 
+                                                ni maxime totam ratione ipsa sequi facere atque! Enim, eum.
+                                            </td>
+                                        </tr>
+                                        <tr class="row" style="margin-left:0;margin-right:0;">
+                                            <th class="col-md-4">Seller Service</th>
+                                            <td class="col-md-8">
+                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio blanditiis omnis,
+                                                non doloribus asperiores quam consequuntur dolore eos, necessitatibus accusamus 
+                                                ni maxime totam ratione ipsa sequi facere atque! Enim, eum.
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{!-- <div class="col-md-2 col-lg-2">
+            right text area
+        </div> --}}
+    </div>
+</div><!-- Left End -->

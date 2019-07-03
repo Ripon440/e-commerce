@@ -1,0 +1,363 @@
+@font-face {
+	font-family: gothamroundedlight_21020;
+	src: url(../fonts/gothamroundedlight_21020.woff);
+}
+
+body {
+	font-family: gothamroundedlight_21020;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+a {
+  color: #365899;
+}
+.mlr-5{
+	margin-left: -0.5rem; margin-right: -0.5rem;
+}
+/* color code */
+.white{
+	background-color: #ffffff;
+}
+.color-black{
+	color: #666666;
+}
+.pink-strawbery{
+	background-color: #383838;  /* #fc4c4e */
+	color: #ffffff;
+}
+.red-candy-color{
+	color:  #292929;
+}
+.red-candy{ /* #383838; */
+	background-color: #292929; /*#292929;/*#292929;/*#d21502;; #15151d;#1b1b1b; #25262b; #202022;*/
+	color: #eeefea;
+}
+.last-child:last-child{
+	padding-right: 0;
+	margin-right: 0;
+}
+/* border */
+.border{
+	border: 1px solid #292929;
+}
+.border-left{
+	border-color: #292929 !important;
+}
+.p-0{
+	padding: 0;
+}
+.m-0{
+	margin: 0;
+}
+.p-l-0{
+	padding-left: 0;
+}
+.p-r-0{
+	padding-right: 0;
+}
+.m-l-0{
+	margin-left: 0;
+}
+.m-r-0{
+	margin-right: 0;
+}
+.p-lr-0{
+	padding-left: 0;
+	padding-right: 0;
+}
+.m-lr-0{
+	margin-left: 0;
+	margin-right: 0;
+}
+.img-h200{
+	width:100%;
+	height:200px;
+}
+.img-h250{
+	width: 100%;
+	height: 250px;
+}
+.code{
+	color: #292929;
+}
+.card-img-overlay .card-title{
+	color: #292929;
+}
+.btn-white{
+	color: #ffffff;
+	border-color: #ffffff;
+}
+.btn-custom{
+	color: #fff;
+	background-color: #365899;
+	border-color: #365899;
+}
+.btn-custom:hover{
+	color: #fff;
+	background-color: #426dbd;
+}
+.btn-outline-custom{
+	color: #365899;
+	background-color: transparent;
+	background-image: none;
+	border-color: #365899;
+}
+.btn-outline-custom:hover{
+	color: #fff;
+	background-color: #365899;
+}
+.btn-outline-white{
+	color: #ffffff;
+	background-color: transparent;
+	background-image: none;
+	border-color: #ffffff;
+}
+.btn-outline-white:hover{
+	color: #292929;
+	background-color: #ffffff;
+}
+
+.btn-red-candy{
+	color: #fff;
+	background-color:#292929;
+	border-color: #292929;
+}
+
+.btn-red-candy:hover{
+	color: #ffffff;
+	background-color:  #464646;
+}
+
+.btn-outline-red-candy{
+	color: #292929;
+	background-color: transparent;
+	background-image: none;
+	border-color: #292929;
+}
+.btn-outline-red-candy:hover{
+	color: #ffffff;
+	background-color: #292929;
+}
+.list-group-item-action:hover{
+	color: #ffffff;
+	background-color: #292929;
+}
+
+.product{
+	background-color:#ffffff;
+}
+
+.product:hover{
+	/* box-shadow: 1px 2px 0px 2px #d6d6d6; */
+
+	transform: scale(1.01);
+	box-shadow: 1px 3px 3px 2px rgba(0, 0 , 0 , .25);
+
+}
+.product-bottom{
+	padding:2px 3px;
+}
+/* .product-bottom h6{
+	margin-bottom:1px; 
+	text-transform:uppercase;
+} */
+
+/* Header Area css */
+/* .header{
+   border-bottom: 1px solid #7d7d7d; 
+} */
+/* .header-search-catagory{} */
+.header-search-catagory ul{
+  margin: 0;
+  padding: 0;
+}
+.header-search-catagory ul li{
+  display: inline;
+  padding: 0 5px;
+  border-right: 1px solid #ebebeb;
+}
+.header-search-catagory ul li a{
+	color: #ebebeb;
+}
+
+.icon{
+	display: none;
+}
+
+/* .header-search-catagory{} */
+.header-navbar nav ul li{
+	margin: .5rem;
+}
+.header-navbar nav ul li a{
+	padding-top: .375rem;
+	padding-bottom: .375rem;
+} 
+
+#searchResult{
+	position: relative;
+}
+#searchResult ul{
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+}
+/* .header-login-logout nav a{
+  padding-left: 0px;
+  padding-right: 0px;
+} */
+
+/* Home page*/
+.home-slider .slider-body img{
+  width: 100%;
+  height: 450px;
+}
+
+ /* .home-category .list-group .list-group-item{
+	 padding: 3px 5px; 
+}  */
+
+  .dropup {
+	position: relative;
+	display: inline-block;
+  }
+  
+  .dropup-content {
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	width:100%;
+	bottom: 0px;
+	left:100%;
+	z-index: 1;
+  }
+  
+  .dropup-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+  }
+  
+  .dropup-content a:hover {background-color: #292929; color: #ffffff;}
+  
+  .dropup:hover .dropup-content {
+	display: block;
+  }
+  .category-hover{
+	  display: none;
+  }
+  .category-hover:hover{
+	  background-color: #ffffff !important;
+  }
+
+.category-hover .navbar .navbar-nav .nav-item:hover{
+	background-color: #292929;
+	color: #ffffff;
+}
+.category-hover .navbar .navbar-nav .nav-item a{
+	color: #292929;
+	font-size: 12px;
+}
+.category-hover .navbar .navbar-nav .nav-item a:hover{
+	color: #ffffff !important;
+}
+
+
+.carousel-indicators li{
+	background-color: #292929;
+}
+.carousel-indicators.active{
+	background-color: blue;
+}
+/* index page*/
+
+/* .product-image img{
+  width: 100%;
+  max-height: 200px;
+} */
+
+
+
+/* Login Area CSS  start*/
+
+.login-form{
+	margin: 20px auto; 
+	border: 1px solid #292929;
+}
+.login-form .card-header{
+	color: #ffffff;
+	background-color: #292929;
+}
+.login-form .card-header .close{
+	color: #ffffff;
+}
+
+.login-form .card-body label{
+	color: #292929;
+}
+
+.login-form .card-body input:focus{
+	border-color: #292929;
+	outline:0;
+	box-shadow:0 0 0 .2rem #c0edcd;
+}
+
+.login-form .login-button .btn{
+	background-color: #292929;
+	color: #ffffff;
+}
+
+/* Login Area CSS  End*/
+
+/*Registration / Sign Up Area start*/
+
+.signup-form{ 
+	margin: 20px auto;
+	border: 1px solid #292929;
+}
+.signup-form .card-header{
+	color: #ffffff;
+	background: #292929;
+}
+.signup-form .card-header .close{
+	color: #ffffff;
+}
+
+.signup-form .card-body label{
+	color: #292929;
+}
+
+.signup-form .card-body input:focus{
+	border-color: #292929;
+	outline:0;
+	box-shadow:0 0 0 .2rem #c0edcd;
+}
+
+.signup-form .signup-button .btn{
+	background-color: #292929;
+	color: #ffffff;
+}
+/*Registration / Sign Up Area start*/
+
+/* Display by Catagory */
+.display-by-category .nav .nav-item .nav-link.active{
+	border-color: #dee2e6 #fff #dee2e6 #dee2e6;
+	border-top-left-radius: .25rem;
+	border-bottom-left-radius: .25rem;
+}
+
+footer .list-group-item{
+	background-color: transparent;
+	border: none;
+	padding: .25rem 1.25rem;
+}
+.footer-bottom ul li, .footer-bottom ul a{
+	color: #ffffff;
+}
+.social-logo a i{
+	font-size: 18px;
+	border: 2px solid;
+    border-image: initial;
+    border-radius: 50%; 
+    padding: 7px; 
+	
+}

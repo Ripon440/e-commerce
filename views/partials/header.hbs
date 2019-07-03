@@ -1,0 +1,77 @@
+
+<!-- <nav class="navbar sticky-top navbar-light bg-light">
+  <a class="navbar-brand" href="#">Fixed top</a>
+</nav> -->
+
+<div class="red-candy">
+    <div class="row m-0 pl-3 pr-3 pt-2 res-plr-0">
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 header-title p-lr-0">
+            <div class="ml-2 mr-2">
+                <h1 class="mb-1"><strong>7 Street</strong><small style="font-size: 16px;"> Shopping & Deals</small></h1>
+                <p class="mb-2" style="letter-spacing:4px;">An Amazing Deal for All</p>
+            </div>
+        </div>
+        
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 header-search p-lr-0">
+            <div class="ml-2 mr-2">
+                <div class="mb-1" style="margin-top:12px;">
+                    <input type="text/number" id="search" name="search" class="form-control" aria-label="search product" aria-describedby="search-product" placeholder="I'm shopping for..." style="display:block;">
+                    {{!-- <input type="hidden" name="_csrf" value="{{ csrfToken }}"> --}}
+                    <div id="searchResult" style="display:block;color:#292929;" class="text-capitalize"></div>
+                </div>
+                <div class="header-search-catagory text-white">
+                    <ul class="text-center">
+                        <li><i class="fa fa-phone mr-1" style="color:#ffffff;"></i>Hot Line: +88-01648533173</li>
+                        <li><i class="fa fa-envelope mr-1" style="color:#ffffff;"></i>Email: 7streetshopping@gmail.com</li>
+                        <li style="border:none;"><a href="/orders/shooping-cart/"><i class="fa fa-shopping-cart mr-1" style="color:#ffffff;"> </i>shopping cart <span class="badge badge-primary badge-pill">{{ session.cart.totalQty }}</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 header-navbar p-lr-0">
+            <nav class="navbar navbar-expand-md navbar-expand-lg pl-0 pr-0 pt-1 mr-1 ml-1">
+                <button class="navbar-toggler form-control" style="background-color:#ffffff;" type="button" data-toggle="collapse" data-target="#navbarT" aria-controls="header-navigation-bar" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars" style="font-size:22px; color:#292929;"></i>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarT">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="/" class="nav-link btn btn-outline-white">Home</a>
+                        </li>
+                        {{#if login }}
+                        
+                        <li class="nav-item">
+                            <a href="/users/profile" class="nav-link btn btn-outline-white">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/users/logout" class="nav-link btn btn-outline-white">Log out</a>
+                        </li>
+                        
+                        {{ else }}
+
+                        <li class="nav-item">
+                            <a href="/users/signin" class="nav-link btn btn-outline-white">Log in</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/users/signup" class="nav-link btn btn-outline-white">Sign up</a>
+                        </li>
+                        
+                        {{/if}}
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+
+{{!-- <div class="row mt-1" style="background:#292929 ;color:#ffffff;">
+    <div class="col-12 col-md-6 col-lg-6">
+        Hot Line: 01701071817
+    </div>
+    <div class="col-12 col-md-6 col-lg-6">
+        Email: 7streetshopping@gmail.com
+    </div>
+</div> --}}
+
+<script type="text/javascript" src="/javascripts/all_search.js"></script>

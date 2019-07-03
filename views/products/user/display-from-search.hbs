@@ -1,0 +1,39 @@
+<div>
+    <div class="row m-0">
+        {{# each search}}
+        <div class="mt-2 mb-1 pl-0 pr-1 col-6 col-xs-6 col-sm-4 col-md-4 col-lg-2">
+            <div class="product">
+                <div>
+                    <a href="/products/users/single-product/{{ this._id }}"><img class="img-h200" src="{{ this.images.[0].img_path }}" alt="product image"></a>
+                </div>
+                <div class="product-bottom text-center">
+                    <p class="mb-0 text-capitalize">{{ this.title }}</p>
+                    <p class="mb-0">{{ this.price }} Tk.</p>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+{{#if others}}
+    <div>
+        <div class="text-center white">
+            <h3 class="pt-2 pb-2">You may also like</h3>
+        </div>
+        <div class="row m-0">
+            {{# each others}}
+            <div class="mt-2 mb-1 pl-0 pr-1 col-6 col-xs-6 col-sm-4 col-md-4 col-lg-2">
+                <div class="product">
+                    <div>
+                        <a href="/products/users/single-product/{{ this._id }}"><img class="img-h200" src="{{ this.images.[0].img_path }}" alt="product image"></a>
+                    </div>
+                    <div class="product-bottom text-center">
+                        <p class="mb-0 text-capitalize">{{ this.title }}</p>
+                        <p class="mb-0">{{ this.price }} Tk.</p>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+{{/if}}
+</div>

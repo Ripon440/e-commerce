@@ -1,0 +1,6 @@
+here the problem is in to display the images in fontend,
+
+	I want to display the products details from the database to the fontend view.
+	The model for the product is in model>product.js file,
+	the route is to display product is in routes>user.js
+	the fortend page is in views>products>user>display-products.hbs

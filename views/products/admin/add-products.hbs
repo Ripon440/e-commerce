@@ -1,0 +1,111 @@
+
+<div class="row p-0">
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 mt-2">
+        {{> dashboard_list }}
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 white mt-2">
+      <div class="">
+        <div class="mt-2 text-center">
+            <h1 class="red-candy-color text-capitalize">Add Products</h1>
+        </div>
+        <div>
+          <form action="/products/add-products" method="post">
+            <div class="form-group row">
+              <label for="product_code" class="col-sm-2 col-md-2 col-form-label">Product code:</label>
+              <div class="col-sm-10 col-md-10">
+                <input type="text/number" name="product_code" class="form-control" id="product_code" placeholder="Product code"  required>
+                <div id="codeSearchResult"></div>
+              </div> 
+            </div>
+
+            <div class="form-group row">
+              <label for="gender" class="col-sm-2 col-md-2 col-form-label">Gender/Others Type:</label>
+              <div class="col-sm-10 col-md-10">
+                <select class="form-control" name="gender" id="gender">
+                    <option>women</option>
+                    <option>men</option>
+                    <option>baby</option>
+                    <option>cellphones-accessories</option>
+                    <option>computer</option>
+                    <option>consumer-electronics</option>
+                    <option>sports-outdoors</option>
+                    <option>others</option>    
+                </select>
+              </div> 
+            </div>
+
+            <div class="form-group row">
+              <label for="product_category" class="col-sm-2 col-md-2 col-form-label">Product Category:</label>
+              <div class="col-sm-10 col-md-10">
+                <select class="form-control" name="product_category" id="product_category" required>
+                  {{# each category}}
+                    {{# each this }}
+                      <option>{{ this.categoryName }}</option>
+                    {{/each}}
+                  {{/each}}
+                </select>
+              </div> 
+            </div>
+
+            <div class="form-group row">
+              <label for="collection_type" class="col-sm-2 col-md-2 col-form-label">Collection Type:</label>
+              <div class="col-sm-10 col-md-10">
+                <select class="form-control" name="collection_type" id="collection_type">
+                    <option>flash</option>
+                    <option>upcoming</option>
+                    <option>collections</option>
+                </select>
+              </div> 
+            </div>
+
+
+            <div class="form-group row">
+              <label for="product_title" class="col-sm-2 col-md-2 col-form-label">Product title:</label>
+              <div class="col-sm-10 col-md-10">
+                <input type="text/number" name="product_title" class="form-control" id="product_title" placeholder="Product title">
+              </div> 
+            </div>
+
+            <div class="form-row">
+              <div class="col-md-6 mb-3">
+                <div class="form-group row">
+                  <label for="product_price" class="col-sm-4 col-md-4 col-form-label">Product Price:</label>
+                  <div class="col-sm-8 col-md-8">
+                    <input type="text" name="product_price" class="form-control" id="product_price" placeholder="Product price"  required>
+                  </div> 
+                </div>
+              </div>
+            </div>
+            
+            <!--<div class="form-group row">
+              <label for="product_description" class="col-sm-2 col-md-2 col-form-label">Product description:</label>
+              <div class="col-sm-10 col-md-10">
+                <textarea name="product_description" id="product_description" class="form-control"></textarea>
+              </div> 
+            </div>-->
+
+            <!--<div class="form-group row">
+              <label for="product_quantity" class="col-sm-2 col-md-2 col-form-label">Product Quantity:</label>
+              <div class="col-sm-10 col-md-10">
+                <input type="number" name="product_quantity" class="form-control" id="product_quantity" placeholder="Product Quantity">
+              </div> 
+            </div>-->
+            
+              <!--<div class="form-group row">
+                <label for="product_image" class="col-sm-4 col-md-4 col-form-label">Product Image:</label>
+                <div class="col-sm-8 col-md-8">
+                  <input type="file" name="productImage" class="form-control" id="product_image"  required>
+                </div> 
+              </div>-->
+
+
+            <button class="btn btn-red-candy form-control" type="submit">Add Product</button>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="/javascripts/product-code-search.js"></script>
+

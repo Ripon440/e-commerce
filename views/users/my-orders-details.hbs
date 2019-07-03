@@ -1,0 +1,41 @@
+<div class="row ml-0 mr-0">
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 mt-2 pl-0 pr-1">
+            {{> user-profile}}
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 mt-2 pl-1 pr-1">
+        <div class="white mb-2 text-center">
+            <h1 class="p-2 red-candy-color">Order Details</h1>
+            <h5>Order date: {{ order.date }}</h5>
+        </div>
+        
+        <div class="row ml-0 mr-0">
+        {{#each order.cart.items }}
+            <div class="col-12 pl-0 pr-0">
+                <div class="row m-0 white mt-2">
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pl-0 res-p-0">
+                        <img src="{{ this.item.img_path}}" alt="prouct image" class="img-h200">
+                    </div>
+                    
+                    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 border-left res-plr-0">
+                        <div class="pl-3 pr-3">
+                            <div class="">
+                                <h1 class="text-capitalize pt-1 pb-1 mb-0 red-candy-color">{{ this.item.title }}</h1>
+                            </div>
+                        
+                            <div>
+                                <ul class="list-group list-group-flush pr-3">
+                                    <li class="list-group-item"><strong>Product code : </strong>{{ this.item.color_code }}</li>
+                                    <li class="list-group-item"><strong>Price : </strong>{{ this.price }} </li>
+                                    <li class="list-group-item"><strong>Size : </strong>{{ this.size }}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+        </div>
+    </div>
+</div>
+
+

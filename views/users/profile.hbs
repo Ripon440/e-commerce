@@ -1,0 +1,90 @@
+<div class="mt-2">
+    <div class="row p-0 ml-0 mr-0">
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 mt-2 pl-0 pr-1">
+            {{> user-profile}}
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 pl-1 pr-0">
+            {{#if userInfo}}
+            <div class="mt-2">
+                <div class="text-center white">
+                    <h1 class="text-capitalize p-2 red-candy-color">My Information</h1>
+                </div>
+                <hr class="mt-2 mb-2" style="border-color:#292929;">
+                <div>
+                    <form class="white p-3">
+                        <div class="form-group row mb-0">
+                            <label for="user_name" class="col-xs-12 col-sm-4 col-md-4 col-lg-4 col-form-label">Name :</label>
+                            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                                <input type="text" readonly class="form-control-plaintext" id="user_name" value="my name">
+                            </div>
+                        </div>
+                        <hr class="mt-1 mb-1">
+                        <div class="form-group row mb-0">
+                            <label for="email" class="col-xs-12 col-sm-4 col-md-4 col-lg-4 col-form-label">Email : </label>
+                            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                                <input type="text" readonly class="form-control-plaintext" id="email" value="{{ userInfo.email }}">
+                            </div>
+                        </div>
+                        <hr class="mt-1 mb-1">
+                        <div class="form-group row mb-0">
+                            <label for="contact" class="col-xs-12 col-sm-4 col-md-4 col-lg-4 col-form-label">Contact Number :</label>
+                            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                                <input type="text" readonly class="form-control-plaintext" id="contact" value="my contact number">
+                            </div>
+                        </div>
+                        <hr class="mt-1 mb-1">
+                        <div class="form-group row mb-0">
+                            <label for="address" class="col-xs-12 col-sm-4 col-md-4 col-lg-4 col-form-label">Address :</label>
+                            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                                <textarea id="address" class="form-control" rows="5" readonly>
+                                    address
+                                </textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            {{/if}}
+
+            {{#if orders }}
+            <div class="m-0">
+                {{#each orders }}
+                <div class="card mt-2 white">
+                    <div class="card-header res-plr-1">
+                        <p class="card-title m-0">Date: {{ this.date }}</p>
+                    </div>
+                    <div class="card-body p-1 res-plr-1">
+                        <ul class="list-group">
+                            {{# each this.items }}
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <strong>{{ this.item.title }}</strong>
+                                <p class="m-0"><span class="badge badge-primary badge-pill">{{ this.qty }}</span></p>
+                                <span class="badge badge-primary badge-pill">{{ this.price }} Tk.</span>
+                                <a href="/" style="background:red;color:#ffffff;padding:2px;border-radius:4px;">Cancle</a>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                    <div class="card-footer pt-0 pb-1 res-plr-1">
+                        <div class="row text-center ml-0 mr-0 text-capitalize">
+                            <div class="col-12 col-xs-12 col-sm-12 col-md-3 col-lg-3 pt-1 pl-1 pr-1 res-plr-0">
+                                <input type="button" class="btn btn-red-candy form-control" value="Total Price: {{ this.cart.totalPrice }} Tk." readonly style="background:#292929 !important;">
+                            </div>
+                            <div class="col-12 col-xs-12 col-sm-12 col-md-3 col-lg-3 pt-1 pl-1 pr-1 res-plr-0"> 
+                                <a href="/users/my-orders/{{ this.id }}" class="btn btn-red-candy form-control" >Order Details</a>
+                            </div>
+                            <div class="col-12 col-xs-12 col-sm-12 col-md-3 col-lg-3 pt-1 pl-1 pr-1 res-plr-0"> 
+                                <p class="btn btn-red-candy form-control mb-0" >{{this.order_status}}</p>
+                            </div>
+                            <div class="col-12 col-xm-12 col-sm-12 col-md-3 col-lg-3 pt-1 pl-1 pr-1 res-plr-0"> 
+                                <a href="/{{ this.id }}" class="btn btn-danger form-control" >Cancle Order</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+            {{/if}}
+        </div>
+    </div>
+</div>

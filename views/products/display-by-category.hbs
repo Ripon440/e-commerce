@@ -1,0 +1,40 @@
+<div class="">
+    <div class="row display-by-category">
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 mt-2">
+            <div class="p-3 white">
+                <div class="mt-2 mb-2 text-center">
+                    <h4 style="display: inline-block;" class="text-uppercase" >category</h4>
+                    <h5 class="text-capitalize red-candy-color">{{ category }}</h5>
+                </div>
+                <ul class="list-group list-group-flush text-capitalize res-text-center">
+                    <a href="/products/display-by-category/{{ category }}" class="list-group-item list-group-item-action">all</a>
+                    {{#if genderTypes}}
+                        {{#each genderTypes}}
+                        <a href="/products/display-by-category-type/{{this}}/{{ ../category }}" class="list-group-item list-group-item-action">{{this}}'s {{../category}}</a>
+                        {{/each}}
+                    {{/if}}
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+            {{# each products}}
+            <div class="row m-0">
+                {{# each this}}
+                <div class="mt-2 mb-1 pl-0 pr-1 col-6 col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                    <div class="product">
+                        <div>
+                            <a href="/products/users/single-product/{{ this._id }}"><img class="img-h200" src="{{ this.images.[0].img_path }}" alt="product image"></a>
+                        </div>
+                        <div class="product-bottom text-center">
+                            <p class="mb-0 text-capitalize">{{ this.title }}</p>
+                            <p class="mb-0">{{ this.price }} Tk.</p>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+            {{/each}}
+        </div>
+    </div> 
+</div>

@@ -1,0 +1,33 @@
+<div class="row p-0">
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 mt-2">
+        {{> dashboard_list }}
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+        <div class="mt-2">
+            <div class="text-center white">
+                <h1 class="text-capitalize p-2 red-candy-color">All users details</h1>
+            </div>
+            <hr class="mt-2 mb-2" style="border-color:red;">
+            {{#each users }}
+            <div class="card mb-2 white">
+                <div class="card-header">
+                    <p class="cart-title m-0">Email : {{ this.email }}</p>
+                </div>
+                <div class="card-body">
+                    <h1>{{ this.email }}</h1>
+                </div>
+                <div class="card-footer">
+                    <div class="row">
+                        <div class="col-xm-12 col-sm-12 col-md-4 col-lg-4 text-center mt-2">
+                            <a href="/admin/delete-user/{{ this._id }}" class="btn btn-red-candy form-control">Delete user</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+
+
+

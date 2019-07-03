@@ -1,0 +1,94 @@
+<!-- Registration/Signup Modal Start-->
+<div class="row m-0">
+	<div class="col-xm-12 col-sm-12 col-md-6 col-lg-6 offset-md-3 offset-lg-3 res-plr-0">
+		<div class="card signup-form">
+			<div class="card-header">
+				<h5 class="card-title" id="SignupTitle">Sign Up</h5>
+			</div>
+
+			{{# if hasErrors}}
+				<div class="alert alert-danger">
+					{{# each messages}}
+						<p>{{this}}</p>
+					{{/each}}
+				</div>
+			{{/if}}
+
+			<div class="card-body">
+				<form action="/users/signup" method="post">
+					<!--<div class="form-group row">
+						<label for="fname" class="col-sm-4 col-md-4 col-lg-4">First name:</label>
+						<div class="col-sm-8 col-md-8 col-lg-8">
+							<input type="text/number" name="fname" id="fname" placeholder="Enter first name" class="form-control">
+						</div>
+					</div>
+					
+					<div class="form-group row">
+						<label for="lname" class=" col-sm-4 col-md-4 col-lg-4">Last name:</label>
+						<div class="col-sm-8 col-md-8 col-lg-8">
+							<input type="text/number" name="lname" id="lname" placeholder="Enter last name" class="form-control">
+						</div>
+					</div>
+					
+					<div class="form-group row">
+						<label for="username" class=" col-sm-4 col-md-4 col-lg-4">Choose a user name:</label>
+						<div class="col-sm-8 col-md-8 col-lg-8">
+							<input type="text/number" name="username" id="username" placeholder="Enter a username" class="form-control">
+						</div>
+					</div> -->
+
+					<div class="form-group row">
+						<label for="email" class=" col-sm-4 col-md-4 col-lg-4">Email:</label>
+						<div class="col-sm-8 col-md-8 col-lg-8">
+							<input type="email" name="email" id="email" placeholder="Enter email" class="form-control">
+						</div>
+					</div>
+
+					<!--<div class="form-group row">
+						<label for="contact_no" class=" col-sm-4 col-md-4 col-lg-4">Contact number:</label>
+						<div class="col-sm-8 col-md-8 col-lg-8">
+							<input type="text/number" name="contact_no" id="contact_no" placeholder="Enter contact number" class="form-control">
+						</div>
+					</div>-->
+
+					<div class="form-group row">
+						<label for="password" class=" col-sm-4 col-md-4 col-lg-4">Password:</label>
+						<div class="col-sm-8 col-md-8 col-lg-8">
+							<input type="password" name="password" id="password" placeholder="Enter password at least 6 characters" class="form-control">
+						</div>
+					</div>
+					<!--
+					<div class="form-group row">
+						<label for="cpassword" class=" col-sm-4 col-md-4 col-lg-4">Confirm password:</label>
+						<div class="col-sm-8 col-md-8 col-lg-8">
+							<input type="password" name="cpassword" id="cpassword" placeholder="Confirm password" class="form-control">
+						</div>
+					</div>-->
+
+					<div class="form-group signup-button">
+						<input type="hidden" name="_csrf" value="{{ csrfToken }}">
+						<button class="btn form-control" type="submit" name="signup">Sign Up</button>
+					</div>
+				</form>
+			</div>
+			<!--
+			<div class="card-footer">
+				<div class="text-center">
+					<h5>Signup with</h5>
+				</div>
+				<div class="row m-0">
+					<div class="col pl-0">
+						<a href="" class="btn btn-red-candy form-control">Google+</a>
+					</div>
+					<div class="col pr-0">
+						<a href="" class="btn btn-success form-control">Facebook</a>
+					</div>
+				</div>
+			</div>
+			-->
+		</div>
+	</div>
+</div>
+
+
+<!-- Registration/Signup Modal End-->

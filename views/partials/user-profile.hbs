@@ -1,0 +1,13 @@
+<div class="p-2 white">
+    <div class="mb-2 text-center">
+        <h4 style="display: inline-block;" class="text-uppercase red-candy-color" >Profile</h4>
+    </div>
+    <ul class="list-group list-group-flush text-capitalize res-text-center">
+        {{#if userInfo.admin }}
+        <a href="/admin/dashboard/" class="list-group-item list-group-item-action">Dashboard</a>
+        {{/if}}
+        <a href="/users/my-orders/" class="list-group-item list-group-item-action">my orders</a>
+        <a href="/users/profile" class="list-group-item list-group-item-action">Profile</a>
+        <a href="/users/reset-password" class="list-group-item list-group-item-action">Change password</a>
+    </ul>
+</div>

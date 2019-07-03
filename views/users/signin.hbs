@@ -1,0 +1,66 @@
+<!-- Login Form Start-->
+<div class="row m-0">
+	<div class="col-xm-12 col-sm-12 col-md-6 col-lg-6 offset-md-3 offset-lg-3 res-plr-0">
+		<div class="card login-form">
+			<div class="card-header">
+				<h5 class="card-title" id="loginTitle">Login Form</h5>
+			</div>
+			<div class="card-body pb-0">
+				{{# if hasErrors}}
+					<div class="alert alert-danger">
+						{{# each messages}}
+							<p>{{this}}</p>
+						{{/each}}
+					</div>
+				{{/if}}
+				<form action="/users/signin" method="post">
+					<div class="form-group">
+						<label for="email">Email:</label>
+						<input type="email" name="email" id="email" placeholder="Enter Email" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="password">Password:</label>
+						<input type="password" name="password" id="password" placeholder="Enter Password" class="form-control">
+					</div>
+					<!--
+					<div class="form-group row">
+						<div class="col">
+							<input type="checkbox" id="checkbox" name="checkbox">
+							<label for="checkbox" style="vertical-align: middle;">Remember me.</label>
+						</div>
+						<div class="col" style="text-align: right;">
+							<a href="#">Forgot password?</a>
+						</div>
+					</div>
+					-->
+					<div class="form-group login-button">
+						<input type="hidden" name="_csrf" value="{{ csrfToken }}">
+						<button class="btn form-control" type="submit" name="login">Login</button>
+					</div>
+				</form>
+				<!--
+				<div class="">
+					<div class="text-center">
+						<h5>Login with</h5>
+					</div>
+					<div class="row m-0">
+						<div class="col pl-0">
+							<a href="" class="btn btn-red-candy form-control">Google+</a>
+						</div>
+						<div class="col pr-0">
+							<a href="" class="btn btn-success form-control">Facebook</a>
+						</div>
+					</div>
+					
+				</div> -->
+			</div>
+			<div class="card-footer res-plr-0">
+				<p style="margin: 5px;" class="btn">Don't have an account?</p><a href="/users/signup" class="btn btn-success">Signup</a>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+
+<!-- Login Form End-->

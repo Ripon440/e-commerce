@@ -1,0 +1,58 @@
+<div class="row mb-2 ml-0 mr-0">
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 mt-2 pl-1 pr-1">
+        {{> dashboard_list }}
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 mt-2 pl-1 pr-1">
+        <div class="text-center white">
+            <h1 class="text-capitalize p-2 red-candy-color">Client Details</h1>
+        </div>
+        <hr class="mt-2 mb-2" style="border-color:#292929;">
+        <div>
+            <form class="white p-3">
+                <div class="form-group row mb-0">
+                    <label for="user_name" class="col-xs-12 col-sm-4 col-md-4 col-lg-4 col-form-label">User Name :</label>
+                    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                        <input type="text" readonly class="form-control-plaintext" id="user_name" value="{{ user_info.name }}">
+                    </div>
+                </div>
+                <hr class="mt-1 mb-1">
+                <div class="form-group row mb-0">
+                    <label for="email" class="col-xs-12 col-sm-4 col-md-4 col-lg-4 col-form-label">Email : </label>
+                    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                        <input type="text" readonly class="form-control-plaintext" id="email" value="{{ user.email }}">
+                    </div>
+                </div>
+                <hr class="mt-1 mb-1">
+                <div class="form-group row mb-0">
+                    <label for="contact" class="col-xs-12 col-sm-4 col-md-4 col-lg-4 col-form-label">User Contact Number :</label>
+                    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                        <input type="text" readonly class="form-control-plaintext" id="contact" value="{{ user_info.contact_number }}">
+                    </div>
+                </div>
+                <hr class="mt-1 mb-1">
+                <div class="form-group row mb-0">
+                    <label for="pickup_point" class="col-xs-12 col-sm-4 col-md-4 col-lg-4 col-form-label">Product Pickup Point :</label>
+                    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                        <input type="text" readonly class="form-control-plaintext" id="pickup_point" value="{{ user_info.pickup_point }}">
+                    </div>
+                </div>
+                <hr class="mt-1 mb-1">
+                <div class="form-group row mb-0">
+                    <label for="date" class="col-xs-12 col-sm-4 col-md-4 col-lg-4 col-form-label">Order date :</label>
+                    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                        <input type="text" readonly class="form-control-plaintext" id="date" value="{{ user_info.date }}">
+                    </div>
+                </div>
+                <hr class="mt-1 mb-1">
+                <div class="form-group row mb-0">
+                    <label for="address" class="col-xs-12 col-sm-4 col-md-4 col-lg-4 col-form-label">User Address :</label>
+                    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                        <textarea id="address" class="form-control" rows="5" readonly>
+                            {{ user_info.address }}
+                        </textarea>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

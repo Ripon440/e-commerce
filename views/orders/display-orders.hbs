@@ -1,0 +1,53 @@
+
+<div class="row p-0">
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 mt-2">
+        {{> dashboard_list }}
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 pl-0 pr-0">
+        <div class="mt-2">
+            <div class="text-center white">
+                <h1 class="text-capitalize p-2 red-candy-color">Client Orders</h1>
+            </div>
+            <hr class="mt-2 mb-2" style="border-color:#292929;">
+            {{# each orders }}
+            <div class="card mb-2 white">
+                <div class="card-header">
+                    <p class="cart-title m-0">Date : {{ this.date }}</p>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        {{# each this.items }}
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <strong>{{ this.item.title }}</strong>
+                            <p class="m-0">Quantity: <span class="badge badge-primary badge-pill">{{ this.qty }}</span></p>
+                            <span class="badge badge-primary badge-pill">{{ this.price }} Tk.</span>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <div class="row">
+                        <div class="col-xm-12 col-sm-12 col-md-4 col-lg-4 text-center mt-1">
+                            <input type="button" class="btn btn-red-candy" value="Total Price: {{ this.cart.totalPrice }} Tk." readonly>
+                        </div>
+                        <div class="col-xm-12 col-sm-12 col-md-4 col-lg-4 text-center mt-1"> 
+                            <a href="/orders/single-order-details/{{ this.id }}" class="btn btn-red-candy" >Order Details</a>
+                        </div>
+                        
+                        <div class="col-xm-12 col-sm-12 col-md-4 col-lg-4 text-center mt-1"> 
+                            <a href="/orders/single-order-client/{{ this.id }}" class="btn btn-red-candy" >Client Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    
+
