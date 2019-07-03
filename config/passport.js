@@ -38,7 +38,7 @@ passport.use('local.signup', new LocalStrategy({
         var newUser = new User();
         newUser.email = email;
         newUser.password = newUser.encryptPassword(password);
-        if(email == 'riponsarkar21@gmail.com'){
+        if(email == 'admin@gmail.com'){//enter admin email address
             newUser.admin = true;
         }
         newUser.save(function(err, result){
